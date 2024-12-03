@@ -7,7 +7,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   rules:
-  - host: dashboard.local
+  - host: dashboard.local  # Specify the host here
     http:
       paths:
       - path: /
