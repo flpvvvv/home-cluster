@@ -7,15 +7,15 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   rules:
-    - host: dashboard.local
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: kubernetes-dashboard
-                port:
-                  number: 443
-    - hosts:
-        - dashboard.local
+  - host: dashboard.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kubernetes-dashboard
+            port:
+              number: 443
+  - hosts:
+    - dashboard.local
