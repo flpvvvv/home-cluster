@@ -17,5 +17,3 @@ spec:
             name: kubernetes-dashboard
             port:
               number: 443
-  - hosts:
-    - dashboard.local
