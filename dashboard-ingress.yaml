@@ -5,6 +5,9 @@ metadata:
   namespace: kubernetes-dashboard
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
+    # Add these annotations for HTTP support
+    kubernetes.io/ingress.allow-http: "true"
+    traefik.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
   - host: dashboard.local  # Specify the host here
@@ -16,4 +19,5 @@ spec:
           service:
             name: kubernetes-dashboard
             port:
-              number: 80
+              # Dashboard service typically runs on port 443
+              number: 443
